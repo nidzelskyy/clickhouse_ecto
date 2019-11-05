@@ -33,6 +33,13 @@ config :example_app, ExampleApp.ClickHouseRepo,
        pool_size: 30
 ```
 
+Add `ExampleApp.ClickHouseRepo` to `/config/config.exs` file like this:
+
+```elixir
+config :example_app,
+     ecto_repos: [ExampleApp.Repo, ExampleApp.ClickHouseRepo]
+```
+
 Do not forget to add :clickhouse_ecto and :clickhousex to your
 applications:
 
